@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+<header>
+  <nav>
+    <div class="container">
+      <a href="{% url 'home' %}">Django Todo App</a>
+      <ul>
+        <li><a href="{% url 'list' %}">Tasks</a></li>
+        <li><a href="{% url 'create' %}">New Task</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
