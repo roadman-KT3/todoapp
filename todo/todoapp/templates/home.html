@@ -1,16 +1,29 @@
-<!DOCTYPE html>
-<html>
-    <head>
-	    <title>Todo App - Home</title>
-    </head>
-<body>
-		  {% include 'partials/_header.html' %}
-			
-	<main>
-		<h1>Welcome to the Todo App</h1>
-		<p>This is a simple Todo app built using Django.</p>
-		<p>Get started by selecting one of the options from the navigation menu above.</p>
+{% extends 'layout.html' %}
+
+{% load static %}
+
+
+{% block content  %}
+	<main class= 'main-body' >
+		<h1 id='title'> Hello and Welcome! </h1>
+		<h2 id='mid-sec'>This is a simple Todo app built using Django.</h2>
+		<pre id = 'last-sec'>Get started by selecting one of the options from the navigation menu below.</pre>
 	</main>
-		{% include 'footer.html' %}
-</body>
-</html>
+	<br>
+	<section>
+		<nav>
+			<div class="container">
+			  <a href="{% url 'home' %}">Django Todo App</a>
+			  <ul>
+				<li><a href="{% url 'list' %}">Tasks</a></li>
+				<li><a href="{% url 'create' %}">New Task</a></li>
+			  </ul>
+			</div>
+		  </nav>
+		  
+	</section>
+	
+		{% include 'partials/_footer.html' %} 
+    
+{% endblock  %}
+

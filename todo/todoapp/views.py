@@ -14,7 +14,7 @@ class TodoCreate(CreateView):
 class TodoList(ListView):
     model = Todo.objects.all()
     #template_name = 'todo.html'
-    context_object_name = 'todos'
+    #context_object_name = 'todos'
 
 class TodoDetail(DetailView):
     model = Todo.objects.all()
