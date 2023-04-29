@@ -4,26 +4,28 @@
 
 
 {% block content  %}
-	<main class= 'main-body' >
-		<h1 id='title'> Hello and Welcome! </h1>
-		<h2 id='mid-sec'>This is a simple Todo app built using Django.</h2>
-		<pre id = 'last-sec'>Get started by selecting one of the options from the navigation menu below.</pre>
-	</main>
+	<img id= 'iamge-id' src="https://cdn.iconscout.com/icon/free/png-512/django-2-282855.png" alt="Django App">
+	    <main class= 'main-body' >
+			<h1 id='title'> Hello and Welcome! </h1>
+			<h2 id='mid-sec'>This is a simple Todo app built using Django.</h2>
+			<pre id = 'last-sec'>Get started by selecting one of the options from the navigation menu below.</pre>
+		</main>
 	<br>
-	<section>
-		<nav>
-			<div class="container">
-			  <a href="{% url 'home' %}">Django Todo App</a>
-			  <ul>
-				<li><a href="{% url 'list' %}">Tasks</a></li>
-				<li><a href="{% url 'create' %}">New Task</a></li>
-			  </ul>
-			</div>
-		  </nav>
+		<section>
+			<nav>
+				<div class="container">
+						<button id='home-button'>
+							<a href="{% url 'home' %}">Home</a>
+						</button>
+					<ul>
+						{% comment %} <li><a href="{% url 'list' %}">Tasks</a></li> {% endcomment %}
+						{% comment %} <li><a href="{% url 'create' %}">New Task</a></li> {% endcomment %}
+					</ul>
+				</div>
+		  	</nav>
 		  
 	</section>
 	
-		{% include 'partials/_footer.html' %} 
-    
+		
 {% endblock  %}
 

@@ -1,0 +1,13 @@
+html
+{% extends "layout.html" %}
+
+{% block content %}
+<main class= 'create-form'>
+    <h1>Create a Reminder</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</main>
+{% endblock %}

@@ -3,15 +3,12 @@
 {% block content %}
 <div>
     <ul>
-            {% for item in todo %}
-
+            
                 <li>{{ item.activity }}</li>
                 <li>{{ item.description }}</li>
                 <li>{{ item.time }}</li>
                 <li>{{ item.completed }}</li>
-
-            {% endfor %}
-        
+            
     </ul>
 </div>
 
