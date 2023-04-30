@@ -1,16 +1,17 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div>
+<div class = 'detail-view'>
     <ul>
             
-                <li>{{ item.activity }}</li>
-                <li>{{ item.description }}</li>
-                <li>{{ item.time }}</li>
-                <li>{{ item.completed }}</li>
+                <li>{{ todo.activity }}</li>
+                <li>{{ todo.description }}</li>
+                <li>{{ todo.time }}</li>
+                <li>{{ todo.completed }}</li>
             
     </ul>
 </div>
 
 
 {% endblock  %}
+

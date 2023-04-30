@@ -14,13 +14,11 @@
 		<section>
 			<nav>
 				<div class="container">
-						<button id='home-button'>
-							<a href="{% url 'home' %}">Home</a>
-						</button>
-					<ul>
-						{% comment %} <li><a href="{% url 'list' %}">Tasks</a></li> {% endcomment %}
-						{% comment %} <li><a href="{% url 'create' %}">New Task</a></li> {% endcomment %}
-					</ul>
+						
+						<button id='list-button'><a href="{% url 'todo-list' %}">Tasks</a></button>
+						<button id='create-button'><a href="{% url 'todo-create' %}">New Task</a></button>
+						
+					
 				</div>
 		  	</nav>
 		  
