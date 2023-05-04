@@ -141,3 +141,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 3
+
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT =300
+
+LOGIN_REDIRECT_URL = '/home'
+
+ACCOUNT_LOGOUT_REDIRECT_URL = LOGIN_REDIRECT_URL #or “/”`)
