@@ -2,11 +2,22 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Todo
 from .forms import TodoForm
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+
 # Create your views here.
 
+
 def home(request):
-    return render(request, 'home.html')
+    logout_url = reverse('account_logout')
+    context = {
+        
+        'logout_url': logout_url,
+        
+    }
+    return render(request, 'home.html', context)
+# def home(request):
+    
+#     return render(request, 'home.html')
 
 class TodoList(ListView):
     model = Todo

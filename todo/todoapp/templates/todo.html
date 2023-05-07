@@ -2,17 +2,26 @@
 
 {% block content %}
 <div>
-    <ul>
+    
             {% for item in todo %}
 
-                <li>{{ item.activity }}</li>
-                <li>{{ item.description }}</li>
-                <li>{{ item.time }}</li>
-                <li>{{ item.completed }}</li>
+            <h1>
+                {{ item.activity }}
+            </h2>
+            <pre>
+                {{ item.description }}
+            </pre>
+            <p>
+                {{ item.time }}
+            </p>
+            <h4>
+                {{ item.completed }}
+            </h4>
 
-            {% endfor %}
-        
-    </ul>
+            {% endfor %}    
+    <section>
+        <button id='back'><a href="{% url 'home' %}">Back</a></button> 
+    </section>
 </div>
 
 

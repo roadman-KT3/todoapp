@@ -1,5 +1,6 @@
 {% extends 'layout.html' %}
 
+		
 {% load static %}
 
 
@@ -17,7 +18,8 @@
 						
 						<button id='list-button'><a href="{% url 'todo-list' %}">Tasks</a></button>
 						<button id='create-button'><a href="{% url 'todo-create' %}">New Task</a></button>
-						
+						<button id='logout-button'><a href="{{ logout_url }}">Logout</a></button>
+
 					
 				</div>
 		  	</nav>
